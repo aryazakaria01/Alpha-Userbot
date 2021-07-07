@@ -1,0 +1,176 @@
+{
+  "name": "Alpha Userbot",
+  "description": "[Alpha] Alpha Userbot 😈",
+  "logo": "https://telegra.ph/file/47d78f16b499eb3bbd8a4.jpg",
+  "keywords": [
+    "telegram",
+    "userbot",
+    "plugin",
+    "modular",
+    "productivity"
+  ],
+  "repository": "https://github.com/Aftahbagas/Alpha-Userbot",
+  "telegram": "https://t.me/Kanjengingsun",
+  "success_url": "https://t.me/Kanjengingsun",
+  "stack": "container",
+  "env": {
+    "API_KEY": {
+      "description": "Dapatkan Api Key di web my.telegram.org.",
+      "wajib": true
+    },
+    "API_HASH": {
+      "description": "Dapatkan Api Hash Di Web my.telegram.org.",
+      "wajib": true
+    },
+     "STRING_SESSION": {
+      "description": "Dapatkan String Session di termux caranya ada di repo, jika tidak tau reponya tanya @Kanjengingsun di telegram",
+      "required": true
+    },
+    "ALIVE_TEKS_KUSTOM": {
+      "description": "Kustom Pesan Alive Mu Untuk Perintah .alpha (Isi Terserah)",
+      "required": false
+    },
+    "USER_AGE": {
+      "description": "Isi Umurmu Dengan Benar Untuk Perintah .salken",
+      "required": true
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Nama App heroku, Nama App yang paling pertama di isi (liat paling atas)",
+      "required": true
+    },
+    "HEROKU_API_KEY": {
+      "description": "Heroku API KEY mu, dapatkan dari web 'https://dashboard.heroku.com/account'",
+      "value": "Check Di Heroku Dashboard Mu",
+      "required": true
+    },
+    "BOTLOG": {
+      "description": "Kalo Mau Off in BOTLOG Ganti False",
+      "value": "True",
+      "required": true
+    },
+    "BOTLOG_CHATID": {
+      "description": "Buatlah sebuah grup private/public masukan bot rose lalu ketik /id.",
+      "value": "Isi id grup mu",
+      "required": true
+    },
+    "QUOTES_API_TOKEN": {
+      "description": "Dapatkan Token Dari http://antiddos.systems",
+      "value": "33273f18-4a0d-4a76-8d78-a16faa002375",
+      "required": true
+    },
+    "COUNTRY": {
+      "description": "isi tempat tinggalmu dengan benar untuk perintah .salken",
+      "required": true
+    },
+    "PM_AUTO_BAN": {
+      "description": "PM Auto-Ban Feature Switch. Also known as the 'bleep blop, this is a bot...' module.",
+      "value": "False",
+      "required": true
+    },
+    "YOUTUBE_API_KEY": {
+      "description": "YouTube Data API Key for .yt command. Get from https://console.cloud.google.com",
+      "value": "AIzaSyACwFrVv-mlhICIOCvDQgaabo6RIoaK8Dg",
+      "required": true
+    },
+    "OCR_SPACE_API_KEY": {
+      "description": "OCR API Key for .ocr command. Get from https://ocr.space/ocrapi",
+      "value": "0c2078b99188957",
+      "required": true
+    },
+    "REM_BG_API_KEY": {
+      "description": "API Key for .rbg command. Get from https://www.remove.bg/api",
+      "value": "GPLyodhzj3uY2fnJbSsnKek8",
+      "required": true
+    },
+    "ANTI_SPAMBOT": {
+      "description": "Kicks spambots from groups after they join. [Requires admin powers in groups to kick.]",
+      "value": "False"
+    },
+    "ANTI_SPAMBOT_SHOUT": {
+      "description": "Report spambots to @admins in groups after they join, just in case when you don't have admin powers to kick that shit yourself.",
+      "value": "False"
+    },
+    "TMP_DOWNLOAD_DIRECTORY": {
+      "description": "Download location for many modules (GDrive, .download etc..)",
+      "value": "./downloads/"
+    },
+    "CLEAN_WELCOME": {
+      "description": "When a new person joins, the old welcome message is deleted.",
+      "value": "True"
+    },
+    "HEROKU_MEMEZ": {
+      "description": "This should be True if the userbot is running on a Heroku Dyno.",
+      "value": "True",
+      "required": true
+    },
+    "DEFAULT_BIO": {
+      "description": "nama untuk bio akunmu kalo mau ganti ganti saja :)",
+      "value": "A l P H A",
+      "required": false
+    },
+    "ALIVE_NAME": {
+      "description": "Isi sesuai namamu untuk menunjukkan identitas .salken",
+      "required": true
+    },
+    "S_PACK_NAME": {
+      "description": "Nama Sticker Pack Mu",
+      "required": false
+    },
+    "G_BAN_LOGGER_GROUP": {
+      "description": "Buatlah Sebuah Grup Private/Public Lalu Masukkan Bot Rose Lalu Ketik /id.",
+      "value": "Isi id grup mu",
+      "required": true
+    },
+    "BITLY_TOKEN": {
+      "description": "Your Bit.ly API key, get it from 'https://bitly.com/a/sign_up'",
+      "value": "",
+      "required": false
+    },
+    "UB_BLACK_LIST_CHAT": {
+      "description": "Isi Apa Aja",
+      "required": false
+    },
+    "WEATHER_DEFCITY": {
+      "description": "Set the default city for the userbot's weather module.",
+      "value": "Pati",
+      "required": false
+    },
+    "LOGSPAMMER": {
+      "description": "Set this to True in case you want the error logs to be stored in the userbot log group, instead of spitting out the file in the current chat, requires a valid BOTLOG_CHATID to be set.",
+      "value": "True",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Set this to enable inline bot helper. get the token from @BotFather",
+      "required": true
+    },
+    "BOT_USERNAME": {
+      "description": "Username of the bot you created with @BotFather",
+      "required": true
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
+  ],"buildpacks": [{
+    "url": "https://github.com/heroku/heroku-buildpack-python.git"
+  }, {
+    "url": "https://github.com/heroku/heroku-buildpack-redis"
+  }, {
+    "url": "https://github.com/heroku/heroku-buildpack-google-chrome"
+  }, {
+    "url": "https://github.com/HasibulKabir/heroku-buildpack-rarlab"
+  },{
+    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+  }, {
+    "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"
+  }, {
+    "url": "https://github.com/amivin/aria2-heroku"
+  }, {
+    "url": "https://github.com/stevo550/buildpack-slug-cleaner"
+  }]
+}

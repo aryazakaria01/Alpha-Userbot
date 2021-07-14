@@ -1,24 +1,26 @@
-""" Userbot module which contains afk-related commands """
+# Copyright (C) 2020 TeamUltroid
+# Ported by X_ImFine
+# Recode by @mrismanaziz
 
+import asyncio
+import os
 from datetime import datetime
-import time
-from random import choice, randint
 
-from telethon.events import StopPropagation
-from telethon.tl.functions.account import UpdateProfileRequest
+from telethon import events
+from telethon.tl import functions, types
+
+from userbot.events import register
 
 from userbot import (  # noqa pylint: disable=unused-import isort:skip
     AFKREASON,
+    ALIVE_NAME,
     BOTLOG,
     BOTLOG_CHATID,
     CMD_HELP,
-    ALIVE_NAME,
     COUNT_MSG,
     ISAFK,
     PM_AUTO_BAN,
     USERS,
-    PM_AUTO_BAN,
-    CMD_TRIGGER
     bot,
 )
 from userbot.events import register

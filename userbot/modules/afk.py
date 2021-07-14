@@ -2,12 +2,8 @@
 # Ported by X_ImFine
 # Recode by @mrismanaziz
 
-import asyncio
-import os
 from datetime import datetime
 
-from telethon import events
-from telethon.tl import functions, types
 
 from userbot.events import register
 
